@@ -2,4 +2,8 @@ import express from "express";
 
 const app = express();
 
-app.listen(4000, () => console.log("oibb"));
+app.get("/", (request, response) => {
+    return response.json({ message: "Hello World!" });
+});
+
+app.listen(4000, () => console.log("Server is running."));
